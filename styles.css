@@ -1,0 +1,296 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+/* =============================
+   NAVBAR STYLES
+============================= */
+
+/* Brand styling */
+.navbar-brand {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2e3a59;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #55688a;
+  transform: translateY(-1px);
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-size: 17px;
+  font-weight: 500;
+  color: #3d4c68;
+  margin-left: 15px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Underline effect for regular nav items */
+.navbar-nav .nav-link:not(#regbutton)::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3d4c68;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:not(#regbutton):hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #7a869a;
+  transform: translateY(-1px);
+}
+
+/* Register button */
+#regbutton {
+  padding: 7px 18px;
+  border: 1.5px solid #3d4c68;
+  border-radius: 25px;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+  color: #3d4c68;
+}
+
+#regbutton:hover {
+  background-color: #3d4c68;
+  color: #ffffff;
+}
+
+/* Navbar toggler button */
+.navbar-toggler {
+  border-color: #3d4c68;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2858,68,89,0.9%29' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* =============================
+   HERO SECTION
+============================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Left Content */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-content h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2e3a59;
+}
+
+.left-content p {
+  font-size: 1rem;
+  color: #3d4c68;
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  justify-content: start;
+  margin: 20px 0;
+}
+
+input {
+  width: 250px;
+  height: 40px;
+  border-radius: 30px 0 0 30px;
+  border: 2px solid #3d4c68;
+  padding: 0 15px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+button {
+  width: 100px;
+  border-radius: 0 30px 30px 0;
+  border: 2px solid #3d4c68;
+  background-color: #ffffff;
+  color: #3d4c68;
+  font-weight: 600;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-left: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+button:hover {
+  background-color: #55688a;
+  border-color: #55688a;
+  color: white;
+}
+
+/* =============================
+   RIGHT CONTENT SECTION
+============================= */
+
+.right-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  max-width: 100%;
+  gap: 20px;
+  position: relative;
+}
+
+.right-content img {
+  max-width: 320px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+
+#rightimg {
+  transform: translateY(-70px);
+}
+
+/* Overlay box on logos */
+.content-on-logo-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+  z-index: 2;
+  backdrop-filter: blur(10px);
+  background-color: rgba(122, 134, 154, 0.3);
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.content-on-logo-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-on-logo-text ul li {
+  margin: 10px 0;
+}
+
+.content-on-logo-text ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+.footer {
+  background-color: #2e3a59;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 50px;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* =============================
+   RESPONSIVE STYLES
+============================= */
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  #regbutton {
+    display: inline-block;
+    margin-top: 0.7rem;
+  }
+}
+
+/* Hero responsiveness */
+@media (max-width: 767.98px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .right-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .right-content img {
+    max-width: 220px;
+    transform: none !important;
+  }
+
+  #rightimg {
+    transform: none;
+  }
+
+  .content-on-logo-text {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .left-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-content h1 {
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+  }
+
+  .left-content p {
+    font-size: 0.95rem;
+  }
+
+  form {
+    justify-content: center;
+  }
+}
